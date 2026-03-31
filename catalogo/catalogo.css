@@ -518,6 +518,7 @@ a:hover {
     max-width: 500px;
     margin: 0 left; /* centraliza */
     padding: 30px;
+    font-size: 13px;
     }
 }
 
@@ -562,6 +563,7 @@ a:hover {
     max-width: 500px;
     margin: 0 left; /* centraliza */
     padding: 30px;
+    font-size: 13px;
     }
 
 }
@@ -590,5 +592,6 @@ a:hover {
     max-width: 500px;
     margin: 0px left; /* centraliza */
     padding: 30px;
+    font-size: 13px;
     }
 }
