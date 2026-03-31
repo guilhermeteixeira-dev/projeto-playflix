@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+/* Reset básico para todas as tags */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo base do body (modo escuro default) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #2b2a2d 0%, #141414 60%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilo ativado quando a classe light-mode é aplicada */
+.light-mode {
+    background: #fff;
+    color: #000;
+}
+
+.light-mode .profile {
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.light-mode figcaption {
+    color: #000;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    margin-bottom: 0.75rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section[aria-label="Seleção de perfis"] {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav.profiles {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Lista de perfis estilo grid flexível */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Estilo dos links de perfil (modo escuro) */
+.profile {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+figure {
+    margin: 0; /* remove margem padrão de figure */
+    display: flex; /* usa flexbox para legenda abaixo da imagem */
+    flex-direction: column; /* imagem sobre legenda */
+    align-items: center; /* centraliza conteúdo */
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    background-color: #222;
+}
+
+img:hover {
+    border: 1px solid #fff;
+    transform: scale(1.05);
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.light-mode #themeToggle {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.light-mode .profile:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode img {
+    background-color: #eee;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav.profiles {
+        gap: 1.5rem;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    figcaption {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        align-items: center;
+        margin-top: -6rem;
+        min-height: auto;
+        padding: 1rem 0;
+    }
+
+    nav.profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        gap: 4rem;
+    }
+}
+
+
+
