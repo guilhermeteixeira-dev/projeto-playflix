@@ -515,8 +515,8 @@ a:hover {
     grid-template-columns: repeat(2, 1fr); /* SEMPRE 2 COLUNAS */
     gap: 1px;
 
-    max-width: 680px;
-    margin: 0 auto; /* centraliza */
+    max-width: 500px;
+    margin: 0 left; /* centraliza */
     padding: 30px;
     }
 }
@@ -557,10 +557,10 @@ a:hover {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* SEMPRE 2 COLUNAS */
-    gap: 1px;
+    gap: 0px;
 
-    max-width: 680px;
-    margin: 0 auto; /* centraliza */
+    max-width: 500px;
+    margin: 0 left; /* centraliza */
     padding: 30px;
     }
 
@@ -585,10 +585,10 @@ a:hover {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* SEMPRE 2 COLUNAS */
-    gap: 1px;
+    gap: 0px;
 
-    max-width: 680px;
-    margin: 10px left; /* centraliza */
+    max-width: 500px;
+    margin: 0px left; /* centraliza */
     padding: 30px;
     }
 }
